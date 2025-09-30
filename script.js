@@ -6,7 +6,7 @@ let score = 0
 let timeLeft = 30
 let timerInterval = null;
 
-const startScreen = document.getElementById('startscreen')
+const startScreen = document.getElementById('startScreen')
 const quizScreen = document.getElementById('quizScreen')
 const resultScreen = document.getElementById('resultScreen')
 
@@ -67,9 +67,9 @@ async function fetchQuestions() {
         const response = await fetch(`https://opentdb.com/api.php?amount=10&category=${selectedCategory}&difficulty=${selectedDiffLevel}&type=multiple`);
         const data = await response.json();
         questions = data.results.map(q => ({
-            questions: decodeHTML(q.question),
+            question: decodeHTML(q.question),
             correct: decodeHTML(q.correct_answer),
-            options: shuffleArray([...q.incorrect_answers.map(a => decodeHTML(a)), decodeHTML(q.correct_answers)]),
+            options: shuffleArray([...q.incorrect_answers.map(a => decodeHTML(a)), decodeHTML(q.correct_answer)]),
             category: decodeHTML(q.category)
         }));
 
