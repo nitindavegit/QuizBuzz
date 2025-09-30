@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizBuzz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <nav class="navbar">
+            <div class="logo">
+                Quiz <span>Buzz</span>
+            </div>
+        </nav>
+        <div class="container">
+            <!-- Start Screen -->
+            <div class="start-screen" id="startscreen">
+                <h1>Test Your Knowledge</h1>
+                <p class="subtitle">Choose a category and difficulty to begin</p>
+                <div class="section-label">SELECT CATEGORY</div>
+                <div class="category-grid">
+                    <div class="category-card">
+
+
+                            <!-- data category likhna  baaki h -->
+                        <div class="category-icon">📚</div> 
+                        <div class="category-name">General Knowledge</div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">📚</div>
+                        <div class="category-name">Science</div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">📚</div>
+                        <div class="category-name">Maths</div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">📚</div>
+                        <div class="category-name">English</div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">📚</div>
+                        <div class="category-name">Technology</div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">📚</div>
+                        <div class="category-name">Geography</div>
+                    </div>
+                </div>
+
+                <div class="section-label">
+                    <div class="difficulty-buttons">
+
+
+                        <!-- data difficulty likhna baaki h -->
+                        <button class="difficulty-btn">Easy</button>
+                        <button class="difficulty-btn">Medium</button>
+                        <button class="difficulty-btn">Hard</button>
+                    </div>
+                    <button class="start-btn" id="startBtn" disabled>Select a category to start</button>
+                </div>
+
+                <!-- Quiz Screen -->
+                <div class="quiz-screen" id="quizScreen">
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+                    </div>
+                    <div class="quiz-header">
+                        <div class="question-counter" id="questionCounter">Question 1 of 10</div>
+                        <div class="timer-display" id="timerDisplay">
+                            <span>⏱</span>
+                            <span id="timeLeft">30</span>
+                        </div>
+                    </div>
+
+                    <div class="question-box">
+                        <div class="question-category-tag" id="questionCategory">Category</div>
+                        <div class="question-text" id="questionText">Loading Question....</div>
+                    </div>
+                    <div class="options-list" id="optionsList"></div>
+                    <button class="next-btn" id="nextBtn" disabled>Next Question</button>
+                </div>
+
+                <!-- Result Screen -->
+                <div class="result-screen"  id="resultScreen">
+                    <div class="result-score" id="resultScore">8/10</div>
+                    <h2 class="result-title" id="resultTitle">Excellent Work</h2>
+                    <p class="result-subtitle" id="resultSubtitle">You have a strong grasp of the subject</p>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-value" id="correctStat">8</div>
+                            <div class="stat-label">Correct</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="incorrectStat">8</div>
+                            <div class="stat-label">Incorrect</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="accuracyStat">8</div>
+                            <div class="stat-label">Accuracy</div>
+                        </div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="btn-secondary" id="homeBtn">New Category</button>
+                        <button class="btn-primary" id="retryBtn">Retry Quiz</button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="script.js"></script>
+
+</html>
