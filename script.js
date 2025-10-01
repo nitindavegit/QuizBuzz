@@ -70,7 +70,7 @@ async function fetchQuestions() {
             question: decodeHTML(q.question),
             correct: decodeHTML(q.correct_answer),
             options: shuffleArray([...q.incorrect_answers.map(a => decodeHTML(a)), decodeHTML(q.correct_answer)]),
-            category: decodeHTML(q.category)
+            category: decodeHTML(q.category)    
         }));
 
     } catch (error) {
